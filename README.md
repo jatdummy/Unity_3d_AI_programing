@@ -5,5 +5,4 @@
 - [2026-10-20] Unity Behaviour 비헤이비어 트리 
 
 
-학습 내용 기록 Velog
-[velog](https://velog.io/@ewq44/posts)
+[학습 내용 기록 Velog](https://velog.io/@ewq44/posts)
