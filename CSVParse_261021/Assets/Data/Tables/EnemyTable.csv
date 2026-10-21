@@ -1,0 +1,6 @@
+id,Name,MaxHp,DetectRange,AttackRange,Speed,AttackValue
+int,string,int,float,float,float,int
+1,Slime,5,7,5.5,25.5,700
+2,Troll,10,30,10.5,3.5,321
+3,Itadori,100,50,20,16.5,255
+4,Gojo,5000,2000,1500,1000,10000
