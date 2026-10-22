@@ -1,21 +1,28 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyTableParser : MonoBehaviour
 {
     // 파싱 대상이 된 CSV 파일 참조
     [SerializeField] private TextAsset _csvFile;
+
     // 파싱 결과 보관
-    private Dictionary<int, EnemyData> _enemyDatas = new();
+    // private Dictionary<int, EnemyData> _enemyDatas = new();
+    [SerializeField] private List<MonsterStats> _monsterStatsList = new();
+
 
     private void Awake() => LoadTable();
 
     // 파싱된 결과를 반환 
+    
+    /*
     public bool TryGetEnemy(int id, out EnemyData data)
     {
         return _enemyDatas.TryGetValue(id, out data);
     }
+    */
 
     // 파싱
     private void LoadTable()
@@ -50,13 +57,13 @@ public class EnemyTableParser : MonoBehaviour
                 || !float.TryParse(cells[5], out speed)
                 || !int.TryParse(cells[6], out attackValue))
             {
-                Debug.LogError($"요상하이22");
+                Debug.LogError($" 요상하이22 ");
                 continue;
             }
             
             name = cells[1];
 
-            _enemyDatas[id] = new EnemyData(
+            _monsterStatsList[i - 2].SetData(
                 id,
                 name,
                 maxHp,

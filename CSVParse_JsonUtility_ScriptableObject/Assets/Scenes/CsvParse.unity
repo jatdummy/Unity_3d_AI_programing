@@ -119,60 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &70818174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 70818175}
-  - component: {fileID: 70818176}
-  m_Layer: 0
-  m_Name: EnemyGojo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &70818175
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70818174}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &70818176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70818174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f477a76926adb1e48953815b9123b1e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  _parser: {fileID: 1416031027}
-  _id: 4
-  _data:
-    _id: 0
-    _name: 
-    _maxHp: 0
-    _detectRange: 0
-    _attackRange: 0
-    _speed: 0
-    _attackValue: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,16 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f477a76926adb1e48953815b9123b1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  _parser: {fileID: 1416031027}
-  _id: 1
-  _data:
-    _id: 0
-    _name: 
-    _maxHp: 0
-    _detectRange: 0
-    _attackRange: 0
-    _speed: 0
-    _attackValue: 0
+  _stats: {fileID: 11400000, guid: 17802c1301014b9409d86eea2e748bd2, type: 2}
+  _id: -1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,60 +429,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &768541667
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 768541668}
-  - component: {fileID: 768541669}
-  m_Layer: 0
-  m_Name: EnemyTroll
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &768541668
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 768541667}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &768541669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 768541667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f477a76926adb1e48953815b9123b1e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  _parser: {fileID: 1416031027}
-  _id: 2
-  _data:
-    _id: 0
-    _name: 
-    _maxHp: 0
-    _detectRange: 0
-    _attackRange: 0
-    _speed: 0
-    _attackValue: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +508,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyTableParser
   _csvFile: {fileID: 4900000, guid: 3d9429e82185a1f46a1862142e36a58d, type: 3}
+  _monsterStatsList:
+  - {fileID: 11400000, guid: 17802c1301014b9409d86eea2e748bd2, type: 2}
+  - {fileID: 11400000, guid: d3a691164bf9a2542814e22f04f26340, type: 2}
+  - {fileID: 11400000, guid: 6cacfa32c69cae142ade110c4144736c, type: 2}
+  - {fileID: 11400000, guid: 08d585833e7ce334885951a4a576883a, type: 2}
 --- !u!4 &1416031028
 Transform:
   m_ObjectHideFlags: 0
@@ -639,60 +528,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2045846243
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2045846244}
-  - component: {fileID: 2045846245}
-  m_Layer: 0
-  m_Name: EnemyItadori
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2045846244
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045846243}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2045846245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045846243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f477a76926adb1e48953815b9123b1e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  _parser: {fileID: 1416031027}
-  _id: 3
-  _data:
-    _id: 0
-    _name: 
-    _maxHp: 0
-    _detectRange: 0
-    _attackRange: 0
-    _speed: 0
-    _attackValue: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -702,6 +537,3 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1416031028}
   - {fileID: 349529024}
-  - {fileID: 768541668}
-  - {fileID: 2045846244}
-  - {fileID: 70818175}
